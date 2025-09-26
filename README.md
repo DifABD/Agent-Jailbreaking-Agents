@@ -146,20 +146,3 @@ The system is built on modern Python technologies:
 4. Add tests for new functionality
 5. Ensure all tests pass
 6. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-@software{agent_jailbreak_research,
-  title={Agent Jailbreak Research System},
-  author={Research Team},
-  year={2024},
-  url={https://github.com/example/agent-jailbreak-research}
-}
-```

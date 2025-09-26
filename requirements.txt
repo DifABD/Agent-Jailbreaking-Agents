@@ -1,0 +1,5 @@
+# This file is for compatibility with systems that don't support pyproject.toml
+# Install using: pip install -r requirements.txt
+# For development: pip install -e ".[dev]"
+
+-e .

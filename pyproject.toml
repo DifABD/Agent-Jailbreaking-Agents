@@ -1,0 +1,211 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-jailbreak-research"
+version = "0.1.0"
+description = "A systematic investigation framework for LLM agent jailbreaking through multi-turn persuasive dialogue"
+authors = [
+    {name = "Research Team", email = "research@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    # Core LangGraph and LangChain dependencies
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langchain-community>=0.3.0",
+    
+    # Web framework and API
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic>=2.9.0",
+    
+    # Database and ORM
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.13.0",
+    "psycopg2-binary>=2.9.0",  # PostgreSQL adapter
+    "aiosqlite>=0.20.0",       # Async SQLite support
+    
+    # Data analysis and visualization
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "scipy>=1.14.0",
+    "scikit-learn>=1.5.0",
+    "matplotlib>=3.9.0",
+    "plotly>=5.24.0",
+    "seaborn>=0.13.0",
+    
+    # Dashboard and UI
+    "streamlit>=1.38.0",
+    "gradio>=4.44.0",
+    
+    # Async and HTTP clients
+    "httpx>=0.27.0",
+    "aiohttp>=3.10.0",
+    
+    # Configuration and environment
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+    
+    # Logging and monitoring
+    "structlog>=24.4.0",
+    "rich>=13.8.0",
+    
+    # Data validation and serialization
+    "marshmallow>=3.22.0",
+    "jsonschema>=4.23.0",
+    
+    # Utilities
+    "click>=8.1.0",
+    "tqdm>=4.66.0",
+    "python-multipart>=0.0.9",  # For FastAPI file uploads
+]
+
+[project.optional-dependencies]
+dev = [
+    # Testing
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=5.0.0",
+    "pytest-mock>=3.14.0",
+    "httpx>=0.27.0",  # For FastAPI testing
+    
+    # Code quality
+    "black>=24.8.0",
+    "isort>=5.13.0",
+    "flake8>=7.1.0",
+    "mypy>=1.11.0",
+    "pre-commit>=3.8.0",
+    
+    # Documentation
+    "sphinx>=8.0.0",
+    "sphinx-rtd-theme>=2.0.0",
+    
+    # Development tools
+    "jupyter>=1.1.0",
+    "ipython>=8.27.0",
+]
+
+production = [
+    # Production database
+    "psycopg2-binary>=2.9.0",
+    
+    # Production server
+    "gunicorn>=23.0.0",
+    
+    # Monitoring and logging
+    "sentry-sdk[fastapi]>=2.14.0",
+    "prometheus-client>=0.21.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/agent-jailbreak-research"
+Repository = "https://github.com/example/agent-jailbreak-research"
+Documentation = "https://agent-jailbreak-research.readthedocs.io"
+
+[project.scripts]
+ajr-server = "src.api.main:main"
+ajr-experiment = "src.cli.experiment:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["src"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "langgraph.*",
+    "langchain.*",
+    "streamlit.*",
+    "plotly.*",
+    "gradio.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]

